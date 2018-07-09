@@ -54,6 +54,8 @@ void Analyzer::Execute()
 		}
 		_ErrOutput();
 		of_ErrFile.close();
+		g_Gen->End();
+		g_Gen->Print();
 		cout << "·ÖÎöÍê³É" << endl;
 	}
 	else

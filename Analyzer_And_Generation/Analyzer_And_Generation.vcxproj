@@ -150,6 +150,7 @@
     <ClInclude Include="Analyzer.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="Generator.h" />
+    <ClInclude Include="IDENTIFIER.h" />
     <ClInclude Include="Position.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -159,6 +160,7 @@
     <ClCompile Include="Analyzer.cpp" />
     <ClCompile Include="Constants.cpp" />
     <ClCompile Include="Generator.cpp" />
+    <ClCompile Include="IDENTIFIER.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Position.cpp" />
     <ClCompile Include="stdafx.cpp">

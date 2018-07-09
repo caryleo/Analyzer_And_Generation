@@ -5,6 +5,7 @@
 #include <vector>
 #include <stack>
 #include "Token.h"
+#include "IDENTIFIER.h"
 using namespace std;
 
 class Generator
@@ -23,6 +24,8 @@ public:
 	 */
 	void Init(string fileName);
 	void Close();
+	void End();
+	void Print();
 private:
 	string str_AsmFileName;//汇编语言文件名
 	string str_FilePath;//文件路径
@@ -45,5 +48,24 @@ private:
 	stack<Token> s_OPD;
 	stack<Token> s_OPR;
 	vector<Token> v_EXP;
+
+	vector<IDENTIFIER> v_Identifier;
+	int i_Val;//变量
+	int i_Label;//标签
+	int i_PosVal;//赋值左值所在位置
+	int i_Cons;//当前条件表达式的目标
+
+
+	void _ValDefine(int pos);
+	int _IsDefined(string name);
+	void _ExprGo();
+	void _Push(Token tok);
+	void _Pop(string reg);
+	void _CAL(int opr);
+	void _Assign();
+	void _Comment(string comment);
+	void _LoopHead();
+	void _LoopTail();
+	void _Compare();
 };
 
